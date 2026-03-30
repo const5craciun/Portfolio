@@ -1,10 +1,12 @@
-from django.shortcuts import render
 import yfinance as yf
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
+from django.shortcuts import render
 
-def predict(request):
+def predict_stock_price(request):
+    """Predicts a stock price chosen by the user.
+    """
     context = {}
     if request.method == "POST":
         ticker = request.POST.get('ticker', 'AAPL').upper()
@@ -21,7 +23,7 @@ def predict(request):
             model = LinearRegression()
             model.fit(X, y)
             
-            # Predict next day
+            # Predict for next day
             next_day = np.array([[len(data)]])
             prediction = model.predict(next_day)[0]
             
@@ -32,24 +34,3 @@ def predict(request):
             }
             
     return render(request, 'predict.html', context)
-
-def home(request):
-    return render(request, 'home.html')
-
-def about(request):
-    return render(request, 'about.html')
-
-def contact(request):
-    return render(request, 'contact.html')
-
-# Projects main page
-def projects_index(request):
-    return render(request, 'projects/index.html')
-
-# NLP project page
-def nlp_topic_modeling(request):
-    return render(request, 'projects/nlp_topic_modeling.html')
-
-# ML project page
-def ml_predictor(request):
-    return render(request, 'projects/predict.html')

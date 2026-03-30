@@ -17,7 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'predictor',
+    'services',
 ]
 ROOT_URLCONF = 'config.urls'
 
