@@ -22,6 +22,15 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
-# Scroll to the bottom and add this for local testing:
-ALLOWED_HOSTS = ['*']
 
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    "cbcportofolio.com",
+    "www.cbcportofolio.com",
+    "98.93.54.131"
+]
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
