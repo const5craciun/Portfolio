@@ -41,3 +41,15 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+# Projects main page
+def projects_index(request):
+    return render(request, 'projects/index.html')
+
+# NLP project page
+def nlp_topic_modeling(request):
+    return render(request, 'projects/nlp_topic_modeling.html')
+
+# ML project page
+def ml_predictor(request):
+    return render(request, 'projects/ml_predictor.html')
