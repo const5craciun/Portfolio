@@ -10,6 +10,7 @@ def predict_lr(request):
         result = predict_stock_price(ticker)
 
         if result:
+            result["ticker"] = ticker
             context = result
 
     return render(request, "projects_html/stock_pred_lr/predict.html", context)
