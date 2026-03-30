@@ -3,9 +3,7 @@ import sys
 import os
 from pathlib import Path
 
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(BASE_DIR)
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 DATABASES = {
     'default': {
@@ -13,6 +11,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 SECRET_KEY="9ajvq=mmcm!qv%k5)9pnc54sp#b%a_3sdzesn9^jz--1w8l663"
 
 INSTALLED_APPS = [
