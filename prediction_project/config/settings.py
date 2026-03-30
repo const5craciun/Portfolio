@@ -9,6 +9,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+SECRET_KEY="9ajvq=mmcm!qv%k5)9pnc54sp#b%a_3sdzesn9^jz--1w8l663"
 
 INSTALLED_APPS = [
     'django.contrib.auth',
