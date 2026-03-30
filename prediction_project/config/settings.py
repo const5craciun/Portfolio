@@ -10,6 +10,12 @@ INSTALLED_APPS = [
 ]
 ROOT_URLCONF = 'config.urls'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 TEMPLATES = [
     {
@@ -31,6 +37,6 @@ ALLOWED_HOSTS = [
     "98.93.54.131"
 ]
 
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+#SECURE_SSL_REDIRECT = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
