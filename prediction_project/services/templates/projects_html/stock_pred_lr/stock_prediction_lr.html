@@ -1,20 +1,110 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <h2>Stock Price "Predictor"</h2>
-    <form method="POST">
-        {% csrf_token %}
-        <input type="text" name="ticker" placeholder="Enter Ticker (e.g. TSLA)">
-        <button type="submit">Predict Tomorrow</button>
-    </form>
+<head>
+    <title>Stock Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            text-align: center;
+            padding: 40px;
+        }
 
-    {% if ticker %}
-        <h3>Results for {{ ticker }}:</h3>
-        <p>Last Closing Price: ${{ current_price }}</p>
-        <p><strong>Predicted Price: ${{ predicted_price }}</strong></p>
-        <small>*Note: This is a simple linear trend, not financial advice!</small>
-    {% endif %}
-    <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'projects' %}">← Back to Projects</a>
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-box {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 65%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px 14px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .results {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f4f8;
+            border-radius: 8px;
+        }
+
+        .nav-links {
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 5px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        small {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Stock Price "Predictor"</h2>
+
+        <form method="POST" class="form-box">
+            {% csrf_token %}
+            <input type="text" name="ticker" placeholder="Enter Ticker (e.g. TSLA)" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if ticker %}
+        <div class="results">
+            <h3>Results for {{ ticker }}:</h3>
+            <p>Last Closing Price: ${{ current_price }}</p>
+            <p><strong>Predicted Price: ${{ predicted_price }}</strong></p>
+            <small>*Note: This is a simple linear trend, not financial advice!</small>
+        </div>
+        {% endif %}
+
+        <div class="nav-links">
+            <a href="{% url 'home' %}" class="btn">← Home</a>
+            <a href="{% url 'projects' %}" class="btn">Projects →</a>
+        </div>
+    </div>
+
 </body>
 </html>
