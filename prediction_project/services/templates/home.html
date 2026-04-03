@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <h2>Portofolio Constantin-Bogdan Craciun</h2>
+    <h2>Portfolio Constantin-Bogdan Craciun</h2>
 
-<a href="{% url 'about' %}">About</a>
-<a href="{% url 'contact' %}">Contact</a>
-<a href="{% url 'projects' %}">Projects</a>
+    <ul>
+        <li>
+            <a href="{% url 'about' %}">About</a> - Description about this portfolio.
+        </li>
+        <li>
+            <a href="{% url 'contact' %}">Contact</a> - How you can contact me.
+        </li>
+        <li>
+            <a href="{% url 'projects' %}">Projects</a> - A list of projects that I developed.
+        </li>
+    </ul>
 
 </body>
 </html>
