@@ -2,23 +2,78 @@
 <html>
 <head>
     <title>About</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>About</h1>
+<div class="container">
+    <h1>About</h1>
 
-<p>
-Hi! Welcome to my portfolio! It’s still a work in progress, focused on building the underlying infrastructure of the site.
-</p>
+    <p>
+        Welcome to my portfolio. This project is currently a work in progress, with a strong focus on building a solid backend infrastructure and deploying a functional web application in a real cloud environment.
+    </p>
 
-<h2>Technologies used:</h2>
+    <p>
+        The goal of this project is not just presentation, but to demonstrate practical experience with deployment, system design, and full-stack development.
+    </p>
 
-<ul>
-    <li>AWS EC2 - provisioning compute infrastructure. Changed the EC2 public IP address with a DNS</li>
-    <li>Python and Django - web application development</li>
-</ul>
+    <h2>Technologies Used</h2>
 
-<a href="{% url 'home' %}">Home</a>
+    <ul>
+        <li><strong>AWS EC2</strong> – Provisioning and managing cloud-based virtual servers. Configured with a custom domain using DNS.</li>
+        <li><strong>Python</strong> – Core programming language used for backend logic.</li>
+        <li><strong>Django</strong> – Web framework used to build and structure the application.</li>
+        <li><strong>Gunicorn</strong> – WSGI HTTP server used to run the Django application in production.</li>
+        <li><strong>Nginx</strong> – Reverse proxy server used for handling requests, routing traffic, and improving performance.</li>
+    </ul>
+
+    <a href="{% url 'home' %}" class="btn">← Home</a>
+</div>
 
 </body>
 </html>
