@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marketing AI Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .nav-links {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 5px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        small {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Marketing AI Chatbot</h2>
+        <p>
+            This project explores an agentic AI system designed to interact with and analyze a marketing dataset using natural language.
+            The chatbot is capable of answering analytical questions, generating insights, and supporting follow-up reasoning over structured data.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Project Objective</h2>
+        <p>
+            The goal is to build an intelligent assistant that can query a marketing dataframe and provide data-driven answers.
+            It supports exploratory analysis, trend detection, and basic visualization generation through natural language interaction.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Key Capabilities</h2>
+        <ul>
+            <li>Natural language querying over structured marketing data</li>
+            <li>Multi-turn conversational reasoning (follow-up questions)</li>
+            <li>Data aggregation and statistical analysis</li>
+            <li>Trend analysis and simple plotting of key metrics</li>
+            <li>Agent-like behavior using tool-based reasoning</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Technologies Used</h2>
+        <ul>
+            <li>Python</li>
+            <li>Transformers (Hugging Face)</li>
+            <li>Large Language Models (LLaMA 70B)</li>
+            <li>Pandas for data manipulation</li>
+            <li>Agentic AI / tool-calling architecture</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Architecture Overview</h2>
+        <p>
+            The system combines a large language model with structured data operations.
+            The LLM interprets user intent, selects appropriate analytical operations, and interacts with the dataframe to compute results.
+            This allows it to behave like an analyst capable of reasoning over marketing performance data in real time.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Links</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/const5craciun/chatbot_ai_agent" target="_blank">
+                    GitHub Repository
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="nav-links">
+        <a href="{% url 'home' %}" class="btn">← Home</a>
+        <a href="{% url 'projects' %}" class="btn">Projects →</a>
+    </div>
+
+</div>
+
+</body>
+</html>

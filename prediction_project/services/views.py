@@ -30,3 +30,6 @@ def projects_index(request):
 def nlp_topic_modeling(request):
     return render(request, 'projects_html/nlp_tm/nlp_topic_modeling.html')
 
+# marketing chatbot
+def marketing_chatbot(request):
+    return render(request,'projects_html/marketing_chatbot/marketing_chat.html')
