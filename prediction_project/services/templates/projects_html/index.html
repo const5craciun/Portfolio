@@ -15,7 +15,7 @@
             background: white;
             padding: 30px;
             border-radius: 10px;
-            width: 600px;
+            width: 650px;
             margin: auto;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             text-align: left;
@@ -23,7 +23,7 @@
 
         h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         ol {
@@ -44,6 +44,7 @@
         p {
             margin: 6px 0;
             color: #333;
+            line-height: 1.5;
         }
 
         .keywords {
@@ -66,11 +67,12 @@
         .btn {
             display: inline-block;
             margin-top: 25px;
-            padding: 8px 16px;
+            padding: 10px 18px;
             background-color: #007BFF;
             color: white;
             text-decoration: none;
             border-radius: 6px;
+            font-weight: bold;
         }
 
         .btn:hover {
@@ -86,47 +88,70 @@
     <h2>My Projects</h2>
 
     <ol>
+
+        <!-- 1. Marketing Chatbot -->
         <li>
-            <h3>NLP Topic Modeling</h3>
+            <h3>Marketing AI Chatbot</h3>
 
             <p>
-                Master’s thesis project focused on extracting hidden themes from healthcare communication data using NLP techniques.
+                Agentic AI system that interacts with structured marketing datasets using LLMs and tool-based reasoning.
+                It supports natural language queries, exploratory analysis, and data-driven insights.
             </p>
 
             <p class="keywords">
-                <strong>Keywords:</strong> Python, NLP, BERTopic, LDA, HPC
-            </p>
-
-            <a href="{% url 'nlp_topic_modeling' %}">Open Project →</a>
-        </li>
-
-        <li>
-            <h3>Marketing Chatbot</h3>
-
-            <p>
-                Agentic AI chatbot that leverages tools and LLMs to answer questions about a marketing dataset.
-            </p>
-
-            <p class="keywords">
-                <strong>Keywords:</strong> Python, AI, Agentic AI, Hugging Face, LLM
+                <strong>Keywords:</strong> Python, LLMs, Agentic AI, Hugging Face, Data Analysis
             </p>
 
             <a href="{% url 'marketing_chatbot' %}">Open Project →</a>
         </li>
 
+        <!-- 2. Whisper -->
         <li>
-            <h3>ML Predictor</h3>
+            <h3>Whisper Fine-Tuning (Danish ASR)</h3>
 
             <p>
-                A simple linear regression model used to explore stock price trend prediction.
+                Fine-tuned OpenAI Whisper on Danish speech data to improve transcription accuracy and evaluate
+                performance across multiple benchmark datasets.
             </p>
 
             <p class="keywords">
-                <strong>Keywords:</strong> Python, Pandas, Regression
+                <strong>Keywords:</strong> Whisper, Speech-to-Text, Transformers, PyTorch, HPC
+            </p>
+
+            <a href="{% url 'whisper_project' %}">Open Project →</a>
+        </li>
+
+        <!-- 3. NLP Topic Modeling -->
+        <li>
+            <h3>NLP Topic Modeling</h3>
+
+            <p>
+                Master’s thesis project focused on extracting latent themes from healthcare communication data
+                using advanced NLP techniques.
+            </p>
+
+            <p class="keywords">
+                <strong>Keywords:</strong> Python, NLP, BERTopic, LDA, HDBSCAN, HPC
+            </p>
+
+            <a href="{% url 'nlp_topic_modeling' %}">Open Project →</a>
+        </li>
+
+        <!-- 4. ML Predictor -->
+        <li>
+            <h3>ML Stock Predictor</h3>
+
+            <p>
+                Simple machine learning project using linear regression to explore short-term stock price trends.
+            </p>
+
+            <p class="keywords">
+                <strong>Keywords:</strong> Python, Pandas, Scikit-learn, Regression
             </p>
 
             <a href="{% url 'ml_predictor' %}">Open Project →</a>
         </li>
+
     </ol>
 
     <a href="{% url 'home' %}" class="btn">← Home</a>

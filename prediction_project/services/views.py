@@ -33,3 +33,6 @@ def nlp_topic_modeling(request):
 # marketing chatbot
 def marketing_chatbot(request):
     return render(request,'projects_html/marketing_chatbot/marketing_chat.html')
+
+def whisper_retrained(request):
+    return render(request, 'projects_html/whisper_retrained/whisperetrained.html')

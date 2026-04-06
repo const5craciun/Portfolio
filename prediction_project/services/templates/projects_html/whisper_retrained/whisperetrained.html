@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Whisper Fine-Tuning Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 650px;
+            margin: auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .nav-links {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 5px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        small {
+            display: block;
+            margin-top: 8px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="section">
+        <h2>Whisper Fine-Tuning on Danish Speech Data</h2>
+        <p>
+            This project focuses on fine-tuning OpenAI’s Whisper model on Danish speech data
+            and evaluating its performance across multiple benchmark datasets.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Project Objective</h2>
+        <p>
+            The goal is to improve speech-to-text performance for underrepresented languages (specifically Danish)
+            by adapting a pretrained ASR (Automatic Speech Recognition) model to domain-specific audio data.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Key Capabilities</h2>
+        <ul>
+            <li>Danish speech transcription with improved accuracy</li>
+            <li>Cross-dataset generalization evaluation</li>
+            <li>Audio preprocessing and normalization pipeline</li>
+            <li>Benchmark testing against standard ASR datasets</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Technologies Used</h2>
+        <ul>
+            <li>Python</li>
+            <li>OpenAI Whisper (fine-tuning)</li>
+            <li>Hugging Face Transformers</li>
+            <li>PyTorch</li>
+            <li>Pandas for data processing</li>
+            <li>High-Performance Computing (HPC) clusters</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Architecture Overview</h2>
+        <p>
+            The pipeline consists of audio preprocessing, feature extraction, model fine-tuning on HPC infrastructure,
+            and evaluation across multiple datasets. Training jobs were executed on a distributed compute environment
+            to handle large-scale audio processing efficiently.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Results & Observations</h2>
+        <ul>
+            <li>Improved transcription quality on Danish speech compared to baseline Whisper</li>
+            <li>Better robustness on noisy audio samples</li>
+            <li>Generalization varies across domains (studio vs. conversational speech)</li>
+        </ul>
+        <small>
+            Note: Results depend on dataset quality and audio preprocessing pipeline.
+        </small>
+    </div>
+
+    <div class="section">
+        <h2>Links</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/const5craciun/Whisper_Retrained" target="_blank">
+                    GitHub Repository
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="nav-links">
+        <a href="{% url 'home' %}" class="btn">← Home</a>
+        <a href="{% url 'projects' %}" class="btn">Projects →</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -10,5 +10,6 @@ urlpatterns = [
     path('projects/', views.projects_index, name='projects'),
     path('projects/nlp/', views.nlp_topic_modeling, name='nlp_topic_modeling'),
     path('projects/ml/', views.ml_predictor, name='ml_predictor'),
-    path('projects/aichat', views.marketing_chatbot, name='marketing_chatbot')
+    path('projects/aichat', views.marketing_chatbot, name='marketing_chatbot'),
+    path('projects/whisper', views.whisper_retrained, name='whisper_retrained')
 ]
